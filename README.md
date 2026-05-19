@@ -20,7 +20,7 @@ AI-powered full-stack cybersecurity web application that detects and redacts sen
 ## Tech Stack
 
 ### Frontend
-- React JS
+- React JSgi
 - Tailwind CSS
 - Axios
 - React Router
