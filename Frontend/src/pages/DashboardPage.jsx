@@ -168,15 +168,15 @@ export function DashboardPage() {
           )}
 
           <div className="flex items-center justify-between gap-3">
-            <div className="text-xs text-slate-400">
-              Backend: <span className="text-slate-200">localhost:8080</span>
-            </div>
             <Button type="button" onClick={onScan} disabled={loading}>
               {loading ? <Spinner /> : null}
               Scan now
             </Button>
           </div>
         </CardContent>
+
+
+
       </Card>
 
       <Card>

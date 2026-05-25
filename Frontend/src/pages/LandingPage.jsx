@@ -193,9 +193,6 @@ export function LandingPage() {
       <footer className="border-t border-slate-900/60 bg-slate-950/30">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-6 text-xs text-slate-500 md:flex-row md:items-center md:justify-between md:px-8">
           <div>© {new Date().getFullYear()} Personal Data Leak Detector</div>
-          <div className="text-slate-600">
-            Backend: <span className="text-slate-400">localhost:8080</span>
-          </div>
         </div>
       </footer>
     </div>
