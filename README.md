@@ -1,41 +1,82 @@
 # Personal Data Leak Detector
 
-AI-powered full-stack cybersecurity web application that detects and redacts sensitive personal information from text, documents, and images using OCR.
+AI-powered full-stack cybersecurity web application that detects, classifies, and redacts sensitive personal information from text, uploaded documents, and images using OCR and regex-based PII detection.
+
+---
+
+## Live Demo
+
+### Frontend
+https://personal-data-leak-detector.vercel.app
+
+### Backend API
+https://personal-data-leak-detector-backend.onrender.com
+
+### Swagger Documentation
+https://personal-data-leak-detector-backend.onrender.com/swagger-ui/index.html
 
 ---
 
 ## Features
 
-- JWT Authentication
+- JWT Authentication & Authorization
 - OCR-based Image Scanning
 - Aadhaar/PAN/Passport Detection
-- PDF/DOCX/TXT Parsing
+- PDF/DOCX/TXT File Parsing
 - Risk Classification Engine
-- Automatic Data Redaction
+- Automatic Sensitive Data Redaction
 - Scan History Dashboard
+- Protected APIs with Spring Security
 - Responsive Cybersecurity UI
+- Dockerized Backend Deployment
+- Cloud Deployment with Vercel + Render
+
+---
+
+## Supported PII Detection
+
+- Email Addresses
+- Indian Phone Numbers
+- Aadhaar Numbers
+- PAN Numbers
+- Passport Numbers
+- Credit Card Numbers
+- Bank Account Numbers
+- IFSC Codes
+- IP Addresses
+- URLs
+- PIN Codes
+- Date of Birth (DOB)
 
 ---
 
 ## Tech Stack
 
 ### Frontend
-- React JSgi
+- React JS
+- Vite
 - Tailwind CSS
 - Axios
-- React Router
+- React Router DOM
 
 ### Backend
 - Spring Boot
 - Java
+- Spring Security
 - JWT Authentication
 - MySQL
 - Swagger/OpenAPI
 
 ### OCR & File Processing
-- Tess4J
+- Tess4J (Tesseract OCR)
 - Apache PDFBox
 - Apache POI
+
+### Deployment
+- Frontend: Vercel
+- Backend: Render
+- Database: Railway MySQL
+- Containerization: Docker
 
 ---
 
@@ -64,63 +105,11 @@ AI-powered full-stack cybersecurity web application that detects and redacts sen
 
 ---
 
-## Supported PII Detection
-
-- Email Addresses
-- Indian Phone Numbers
-- Aadhaar Numbers
-- PAN Numbers
-- Passport Numbers
-- Credit Card Numbers
-- Bank Account Numbers
-- IFSC Codes
-- IP Addresses
-- URLs
-- PIN Codes
-- Date of Birth
-
----
-
-## Setup Instructions
-
-### Backend
-
-```bash
-cd Backend
-mvn spring-boot:run
-```
-
-### Frontend
-
-```bash
-cd Frontend
-npm install
-npm run dev
-```
-
----
-
-## API Documentation
-
-Swagger UI:
+## Architecture Overview
 
 ```text
-http://localhost:8080/swagger-ui/index.html
-```
-
----
-
-## Future Enhancements
-
-- AI-powered risk scoring
-- Multi-language OCR
-- Cloud deployment
-- Admin analytics dashboard
-- Real-time scanning
-- PDF export reports
-
----
-
-## Author
-
-Suji M
+Frontend (React + Vercel)
+        ↓
+Backend REST API (Spring Boot + Render)
+        ↓
+MySQL Database (Railway)
