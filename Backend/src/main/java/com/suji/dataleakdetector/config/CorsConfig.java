@@ -14,10 +14,10 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins(
-                                            "https://personal-data-leak-detector.vercel.app",
-                                            "https://personal-data-leak-detector-a24lbx1nq-suji-s-projects1.vercel.app"
-                                        )
+                        .allowedOriginPatterns(
+                                "https://personal-data-leak-detector.vercel.app",
+                                "https://personal-data-leak-detector-*.vercel.app"
+                            )
                         .allowedMethods("*")
                         .allowedHeaders("*");
             }
