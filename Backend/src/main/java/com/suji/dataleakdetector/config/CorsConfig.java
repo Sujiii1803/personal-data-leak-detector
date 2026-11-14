@@ -16,7 +16,8 @@ public class CorsConfig {
                 registry.addMapping("/**")
                         .allowedOriginPatterns(
                                 "https://personal-data-leak-detector.vercel.app",
-                                "https://personal-data-leak-detector-*.vercel.app"
+                                "https://personal-data-leak-detector-*.vercel.app",
+                                "http://localhost:*"
                             )
                         .allowedMethods("*")
                         .allowedHeaders("*");
