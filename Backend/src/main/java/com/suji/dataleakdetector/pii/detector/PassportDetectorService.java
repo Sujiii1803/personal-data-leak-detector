@@ -9,11 +9,13 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PassportDetectorService {
-  // Example: A1234567
-  private static final Pattern PASSPORT = Pattern.compile("\\b[A-Z]\\d{7}\\b");
+  // Indian Passport format: 1 letter followed by 7 digits.
+  // Pattern.CASE_INSENSITIVE enables matching both uppercase (A1234567) and lowercase (a1234567).
+  private static final Pattern PASSPORT = Pattern.compile(
+      "\\b[A-Z]\\d{7}\\b",
+      Pattern.CASE_INSENSITIVE);
 
   public List<PiiFinding> detect(String text) {
     return PiiRegexUtil.findAll(PASSPORT, text, PiiType.PASSPORT, RiskLevel.HIGH, null);
   }
 }
-
